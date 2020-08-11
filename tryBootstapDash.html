@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
+      <link rel="stylesheet" href="/node_modules/spur-template/dist/css/spur.css">
+      <!-- Local CSS -->
+      <link href="myStyle.css" rel="stylesheet" type:"text/css">
+      
+      <title>SGBEMS - Home</title>
+      
+  </head>
+  <body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top topNav shadow " id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" >
+                <img src="SysLogo.png" class="logoImg align-self-center">
+             <pre><h1 class="titleDashFont align-self-center">Dashboard</h1></pre>
+            </a>
+            <button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right text-uppercase toggleDrop text-white rounded" aria-controls="navbarResponsive"
+                aria-expanded="true" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto navtext">
+                    <li class="nav-item mx-0 mx-lg-1" ><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="tryBootstap.html">Dashboard</a></li>
+                    <li class="nav-item mx-0 mx-lg-1" ><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Controls</a></li>
+                    <li class="nav-item mx-0 mx-lg-1" ><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Database</a></li>
+                    <li class="nav-item mx-0 mx-lg-1" ><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="tryBootstapLogin.html">Settings</a></li>
+                    <li class="nav-item mx-0 mx-lg-1" ><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Sign Out   </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        <!-- Container Starts -->   
+    <div class="container dashPad">
+        <div class="row">
+            <div class=" col col-lg-7 col-xl-7">
+                <h4>Power Storage Data</h4>
+                <div class="row border mx-1">
+                    <div class="col col-lg-7 col-xl-7">
+                        <h5 class=" text-center" >Battery Level indicator</h5>
+                        <div class="chart-gauge gaugePad">
+                            <canvas  id="gauge" class="gauge-graph"></canvas>	
+                        </div>
+                    </div>
+                   
+                    <div class="col-12 col-lg-5 col-xl-5">
+                        <h5 class=" text-center" >Battery Status</h5>
+                        <div class="row border m-auto">
+                            <div class="col "><h5 class=" text-center" >Health</h5></div>
+                        </div>
+                        <div class="row border m-auto ">
+                            <div class="col"><h5 class=" text-center" >Percentage</h5></div>
+                        </div>
+                        <div class="row border m-auto">
+                            <div class="col"><h5 class=" text-center" >Voltage</h5></div>
+                        </div>
+                    </div>
+                    </div>
+                
+            </div>
+            
+            <div class="col-12 col-lg-5 col-xl-5 ">  
+                <h4>Power Generation Data</h4>   
+                <div class="row border mx-1">
+                    <div class="col-12 "><h5 class=" text-center" >Daily</h5></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 "><h5 class=" text-center" >Weekly</h5></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 "><h5 class=" text-center" >Monthly</h5></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 "><h5 class=" text-center" >Yearly</h5></div>
+                </div>
+           </div>    
+        </div>
+
+        <h4 class="pt-2">Power Source Data</h4>
+        <div class="row border mx-1 my-1">
+            <div class="col-sm-12 col-xl-3">
+               <h5 class=" text-center" > Solar</h5>
+                <div class="gauge gaugePad">
+                    <canvas  width="150" height="150" id="canvas-preview1"></canvas>
+                </div>
+            </div>
+            <div class="col-sm-12 col-xl-3">
+                <h5 class=" text-center" >Wind</h5>
+                <div class="gauge gaugePad">
+                    <canvas  width="150" height="150" id="canvas-preview2"></canvas>
+                </div>
+            </div>
+            <div class="col-sm-12 col-xl-3">
+                <h5 class=" text-center" > Hydro</h5>
+                <div class="gauge gaugePad">
+                   <enter> <canvas width="150" height="150" id="canvas-preview3"></canvas></enter>
+                </div>
+            </div>
+            <div class="col-sm-12 col-xl-3">
+                <h5 class=" text-center" >Pedal</h5>
+                <div class="gauge gaugePad">
+                    <canvas width="150" height="150" id="canvas-preview4"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </div>
+        </div>
+    </div>
+    </div>
+    </div>
+      
+ <!-- Footer -->
+ <footer class="fixed-bottom ">
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 ">© 2020 Copyright:
+      Smart Green Building Energy Management System
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+       <script src="/node_modules/spur-template/dist/js/spur.js"></script>
+        <script src="http://bernii.github.io/gauge.js/dist/gauge.min.js"></script>
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+   <script type="text/javascript">
+
+var config = {
+      apiKey: "AIzaSyDSwrMYzXt3Ts67L-hibx4u6OLZmudz4S4",
+      authDomain: "sgbems-8cc97.firebaseapp.com",
+      databaseURL: "https://sgbems-8cc97.firebaseio.com",
+      projectId: "sgbems-8cc97",
+      storageBucket: "sgbems-8cc97.appspot.com",
+      messagingSenderId: "798447769287",
+      appId: "1:798447769287:web:b4239c47ddca8fb84b90e2",
+      measurementId: "G-3L1DPSTK65"
+    };
+
+    firebase.initializeApp(config);
+
+
+    //Solar
+    var valueRef = firebase.database().ref('Sensor').orderByChild('Solar');
+    valueRef.on('value', function(snapshot) {
+
+        var firstName = snapshot.child("Solar").val(); // "Ada"
+        console.log( firstName);
+        
+
+        var opts = {
+      lines: 100, // The number of lines to draw
+      angle: 0.1, // The length of each line
+      lineWidth: 0.13, // The line thickness
+      radiusScale: 1, // Relative radius
+      currval: 50,
+      pointer: {
+        length: 10, // The radius of the inner circle
+        strokeWidth: 10, // The rotation offset
+        color: '#E0E0E0' // Fill color
+  },
+  limitMax: true, // If true, the pointer will not go past the end of the gauge
+  limitMax: firstName,
+  colorStart: '#2DA3DC', // Colors
+  colorStop: '#438a5e', // just experiment with them
+  strokeColor: '#EEEEEE', // to see which ones work best for you
+  generateGradient: false,
+            
+                
+};
+var target = document.getElementById('canvas-preview1'); // your canvas element
+var gauge = new Donut(target).setOptions(opts); // create sexy gauge!
+gauge.maxValue = 100; // set max gauge value
+gauge.setMinValue(0); 
+gauge.animationSpeed = 20; // set animation speed (32 is default value)
+gauge.set(firstName); // set actual value
+
+      
+    });
+
+
+    //Hydro
+    var valueRef = firebase.database().ref('Sensor').orderByChild('Hydro');
+    valueRef.on('value', function(snapshot) {
+
+        var firstName = snapshot.child("Hydro").val(); // "Ada"
+        console.log( firstName);
+        
+
+        var opts = {
+      lines: 100, // The number of lines to draw
+      angle: 0.1, // The length of each line
+      lineWidth: 0.13, // The line thickness
+      radiusScale: 1, // Relative radius
+      currval: 50,
+      pointer: {
+        length: 10, // The radius of the inner circle
+        strokeWidth: 10, // The rotation offset
+        color: '#E0E0E0' // Fill color
+  },
+  limitMax: true, // If true, the pointer will not go past the end of the gauge
+  limitMax: true,
+  colorStart: '#2DA3DC', // Colors
+  colorStop: '#438a5e', // just experiment with them
+  strokeColor: '#EEEEEE', // to see which ones work best for you
+  generateGradient: false,
+            
+                
+};
+var target = document.getElementById('canvas-preview2'); // your canvas element
+var gauge = new Donut(target).setOptions(opts); // create sexy gauge!
+gauge.maxValue = 100; // set max gauge value
+gauge.setMinValue(0); 
+gauge.animationSpeed = 20; // set animation speed (32 is default value)
+gauge.set(firstName); // set actual value
+
+      
+    });
+
+
+    //Wind
+    var valueRef = firebase.database().ref('Sensor').orderByChild('Wind');
+    valueRef.on('value', function(snapshot) {
+
+        var firstName = snapshot.child("Wind").val(); // "Ada"
+        console.log( firstName);
+        
+
+        var opts = {
+      lines: 100, // The number of lines to draw
+      angle: 0.1, // The length of each line
+      lineWidth: 0.13, // The line thickness
+      radiusScale: 1, // Relative radius
+      currval: 50,
+      pointer: {
+        length: 10, // The radius of the inner circle
+        strokeWidth: 10, // The rotation offset
+        color: '#E0E0E0' // Fill color
+  },
+  limitMax: true, // If true, the pointer will not go past the end of the gauge
+  limitMax: true,
+  colorStart: '#2DA3DC', // Colors
+  colorStop: '#438a5e', // just experiment with them
+  strokeColor: '#EEEEEE', // to see which ones work best for you
+  generateGradient: false,
+            
+                
+};
+var target = document.getElementById('canvas-preview3'); // your canvas element
+var gauge = new Donut(target).setOptions(opts); // create sexy gauge!
+gauge.maxValue = 100; // set max gauge value
+gauge.setMinValue(0); 
+gauge.animationSpeed = 20; // set animation speed (32 is default value)
+gauge.set(firstName); // set actual value
+
+      
+    });
+
+//Human
+var valueRef = firebase.database().ref('Sensor').orderByChild('Human');
+    valueRef.on('value', function(snapshot) {
+
+        var firstName = snapshot.child("Human").val(); // "Ada"
+        console.log( firstName);
+        
+
+        var opts = {
+      lines: 100, // The number of lines to draw
+      angle: 0.1, // The length of each line
+      lineWidth: 0.13, // The line thickness
+      radiusScale: 1, // Relative radius
+      currval: 50,
+      pointer: {
+        length: 10, // The radius of the inner circle
+        strokeWidth: 10, // The rotation offset
+        color: '#E0E0E0' // Fill color
+  },
+  limitMax: 'true', // If true, the pointer will not go past the end of the gauge
+  limitMax: 'true',
+  colorStart: '#2DA3DC', // Colors
+  colorStop: '#438a5e', // just experiment with them
+  strokeColor: '#EEEEEE', // to see which ones work best for you
+  generateGradient: 'false',
+            
+                
+};
+var target = document.getElementById('canvas-preview4'); // your canvas element
+var gauge = new Donut(target).setOptions(opts); // create sexy gauge!
+gauge.maxValue = 100; // set max gauge value
+gauge.setMinValue(0); 
+gauge.animationSpeed = 20; // set animation speed (32 is default value)
+gauge.set(firstName); // set actual value
+
+      
+    });
+
+
+    var valueRef = firebase.database().ref('Sensor').orderByChild('Battery');
+    valueRef.on('value', function(snapshot) {
+
+        var firstName = snapshot.child("Battery").val(); // "Ada"
+        console.log( firstName);
+
+var opts = {
+  angle: 0.001, // The span of the gauge arc
+  lineWidth: 0.15, // The line thickness
+  radiusScale: 1, // Relative radius
+  pointer: {
+    length: 0.56, // // Relative to gauge radius
+    strokeWidth: 0.04, // The thickness
+    color: '#000000' // Fill color
+  },
+  limitMax: true,     // If false, max value increases automatically if value > maxValue
+  limitMin: true,     // If true, the min value of the gauge will be fixed
+  colorStart: '#66bb6a',   // Colors
+  colorStop: '#ef5350',    // just experiment with them
+  strokeColor: '#000000',  // to see which ones work best for you
+  generateGradient: true,
+  highDpiSupport: true,     // High resolution support
+	currval: 50,
+	fontsize:24,
+	
+	
+staticZones: [
+   {strokeStyle: "#66bb6a", min: 0, max: 20}, // Red from 100 to 130
+   {strokeStyle: "#9ccc65", min: 20, max:40}, // Yellow
+   {strokeStyle: "#ffee58", min: 40, max: 60}, // Green
+   {strokeStyle: "#ffa726", min: 60, max: 80}, // Yellow
+   {strokeStyle: "#ef5350", min: 80, max: 100}  // Red
+],
+	staticLabels: {
+  font: "10px sans-serif",  // Specifies font
+  labels: [0, 20, 40, 60, 80, 100],  // Print labels at these values
+  color: "#000000",  // Optional: Label text color
+  fractionDigits: 0  // Optional: Numerical precision. 0=round off.
+},
+	
+  
+};
+var target = document.getElementById('gauge'); // your canvas element
+var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
+gauge.maxValue = 100; // set max gauge value
+gauge.setMinValue(0);  // Prefer setter over gauge.minValue = 0
+gauge.animationSpeed = 32; // set animation speed (32 is default value)
+gauge.set(firstName); // set actual value
+
+        
+
+    });
+
+
+
+    </script>
+      
+        
+  </body>
+</html>
